@@ -165,7 +165,7 @@ open class Store<State: StateType>: StoreType {
         dispatchFunction(action)
     }
 
-    @available(*, deprecated, message: "Deprecated in favor of https://github.com/ReSwift/ReSwift-Thunk")
+//    @available(*, deprecated, message: "Deprecated in favor of https://github.com/ReSwift/ReSwift-Thunk")
     open func dispatch(_ actionCreatorProvider: @escaping ActionCreator) {
         if let action = actionCreatorProvider(state, self) {
             dispatch(action)
@@ -192,7 +192,7 @@ open class Store<State: StateType>: StoreType {
 
     public typealias DispatchCallback = (State) -> Void
 
-    @available(*, deprecated, message: "Deprecated in favor of https://github.com/ReSwift/ReSwift-Thunk")
+//    @available(*, deprecated, message: "Deprecated in favor of https://github.com/ReSwift/ReSwift-Thunk")
     public typealias ActionCreator = (_ state: State, _ store: Store) -> Action?
 
     @available(*, deprecated, message: "Deprecated in favor of https://github.com/ReSwift/ReSwift-Thunk")
